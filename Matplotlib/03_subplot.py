@@ -8,7 +8,7 @@ s = np.sin(x)
 y = np.tan(x)
 z = np.exp(x)
 
-# Utilizando o metodo subplot podemos criar varios gráficos dentro de uma mesma figura.abs
+# Utilizando o metodo subplot podemos criar varios gráficos dentro de uma mesma figura.
 
 # Criar subplots: plt.subplots(2, 1) cria uma figura com dois subplots (2 linhas e 1 coluna). 
 # fig é a figura que contém os subplots, e axs é uma matriz de eixos (subplots).
