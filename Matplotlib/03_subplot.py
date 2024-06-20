@@ -8,34 +8,27 @@ s = np.sin(x)
 y = np.tan(x)
 z = np.exp(x)
 
-# Utilizando o metodo subplot podemos criar varios gráficos dentro de uma mesma figura.
+# Utilizando o metodo subplot podemos criar varios gráficos dentro de uma mesma figura.abs
 
 # Criar subplots: plt.subplots(2, 1) cria uma figura com dois subplots (2 linhas e 1 coluna). 
 # fig é a figura que contém os subplots, e axs é uma matriz de eixos (subplots).
 
-fig, axs = plt.subplots(2, 2, figsize=(10, 8))  # 2 linhas, 2 colunas
+plt.figure("Gráficos consenoidais", figsize=(10,5))  # 1 linhas, 2 colunas
+# plt.subplots_adjust(left= 0.102, right=0.974) # ajuste manual
 
 # Primeiro subplot
-axs[0,0].plot(x, c, label='Cosseno')
-axs[0,0].set_title('Onda Cossenoidal')
-axs[0,0].legend()
+ax1 = plt.subplot(1, 2, 1)
+plt.plot(x, c)
+ax1.set_title("Gráfico do Cosseno")
+ax1.set_xlabel("Eixo do Tempo")
+ax1.set_ylabel("Eixo da Amplitude")
 
 # Segundo subplot
-axs[0,1].plot(x, s, label='Seno', color='r')
-axs[0,1].set_title('Onda Senoidal')
-axs[0,1].legend()
-
-# Terceiro subplot
-axs[1,0].plot(x, y, label='Tangente', color='g')
-axs[1,0].set_title('Onda Tangencial')
-axs[1,0].legend()
-axs[1, 0].set_ylim(-10, 10)  # Limitar o eixo y para melhor visualização
-
-# Quarto subplot
-axs[1,1].plot(x, z, label='Exponencial', color='y')
-axs[1,1].set_title('Função Exponencial')
-axs[1,1].legend()
-axs[1, 1].set_ylim(0, 10000)  # Limitar o eixo y para melhor visualização
+ax2 = plt.subplot(1, 2, 2)
+plt.plot(x, s)
+ax2.set_title("Gráfico do Seno")
+ax2.set_xlabel("Eixo do Tempo")
+ax2.set_ylabel("Eixo da Amplitude")
 
 # Ajustar o layout: plt.tight_layout() ajusta automaticamente o espaçamento entre os subplots
 # para que eles não se sobreponham.
