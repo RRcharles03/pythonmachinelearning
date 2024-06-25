@@ -29,7 +29,7 @@ axs[0,1].legend()
 axs[1,0].plot(x, y, label='Tangente', color='g')
 axs[1,0].set_title('Onda Tangencial')
 axs[1,0].legend()
-axs[1, 0].set_ylim(-10, 10)  # Limitar o eixo y para melhor visualização
+axs[1,0].set_ylim(-10, 10)  # Limitar o eixo y para melhor visualização
 
 # Quarto subplot
 axs[1,1].plot(x, z, label='Exponencial', color='y')
